@@ -1,0 +1,18 @@
+# Pedir N° int até o usuaruio digitar 0, depois somar todos
+
+print('\033[1m')
+print('\t\t\t\t\t\t **Digite números para que todos sejam somados**\n')
+print('\033[32;1m')
+print('Para sair digite 0')
+
+print('\033[30;1m')
+soma = 0
+n = 0
+while n < 1:
+    numero = int(input('Digite qualquer número\n'))
+    soma = soma + numero
+    if numero == 0:
+        print('A soma de todos os números é', soma)
+        break
+  
+    

@@ -1,34 +1,39 @@
 lista_de_clientes = []
-contador = 0
+fim = 'SIM'
 
-while contador < 20:
+print('')
+
+while fim == 'sim' or fim == 'SIM':
     cliente = input('Insira o nome do cliente para entrar na lista de espera: ')
     lista_de_clientes.append(cliente)
-    contador = contador+1
+  
 
     print('\033[35;1m')
     print('FILA DE CLIENTES >', (lista_de_clientes))
     print('\033[0m')
-    if contador == 3:
         
-        fim = input('Ainda tem cliente para atendimento? (SIM OU NÃO) ')  
-     
-        if fim == 'não' or fim == 'NÃO':
-            break
+    fim = input('Ainda tem cliente para entrar na fila? (SIM OU NÃO) ')  
+    print('')
+    if fim == 'não' or fim == 'NÃO':
+        continue
 
-while contador > 0:
-    atendimento = input('Nome de cliente que ja foi atendido: ')
-    lista_de_clientes.remove(atendimento) 
+fim_do_atendimento = 'sim'
+
+while fim_do_atendimento == 'sim' or fim_do_atendimento == 'Sim':
+    atendimento = input('Digite 1 para atender o próximo cliente: ')
+    lista_de_clientes.pop(0)
+        
     
     print('\033[35;1m')
     print('FILA DE CLIENTES >', (lista_de_clientes))
     print('\033[0m')
 
-    if contador == 0:
-        pritn('TODOS OS CLIENTE FORAM ATENDIDOS') 
+    fim_do_atendimento = input('Ainda tem cliente para atendimento?') 
     
+    if fim_do_atendimento == 'não' or fim_do_atendimento == 'NÃO':
+        print('\033[36;1m')
+        print(' FIM DA FILA >', (lista_de_clientes))
+        print('\033[0m')
 
 
-print('FILA DE CLIENTES >', (lista_de_clientes))
-   
            

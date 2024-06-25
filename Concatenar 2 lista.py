@@ -2,9 +2,11 @@ lista1 = []
 lista2 = []
 contador = 0
 
+print('\033[33m')
+print('\033[4m Digite >"pare"< para sair') 
+
 while contador < 2:
-    print('\033[33m')
-    print('\033[4m Digite >"pare"< para sair') 
+  
     print('\033[0m', '\033[1m')
     
     
@@ -43,6 +45,13 @@ print('Sua lista completa >', lista1 + lista2 )
 print('\033[0m')
 
 
+    
+        
+
+    
+  
+    
+    
     
         
 
